@@ -2,4 +2,6 @@
 
 @interface Schwarzwald : NSObject
 
++ (NSArray *)visibleWindows;
+
 @end

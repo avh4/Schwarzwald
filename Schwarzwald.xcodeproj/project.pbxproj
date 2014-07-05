@@ -15,6 +15,17 @@
 		B1366D101968B31700B40CCC /* Schwarzwald.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1366CF31968B31700B40CCC /* Schwarzwald.framework */; };
 		B1366D161968B31700B40CCC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1366D141968B31700B40CCC /* InfoPlist.strings */; };
 		B1366D181968B31700B40CCC /* SchwarzwaldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1366D171968B31700B40CCC /* SchwarzwaldTests.m */; };
+		B1366D231968B3BA00B40CCC /* WeakReference.h in Headers */ = {isa = PBXBuildFile; fileRef = B1366D211968B3BA00B40CCC /* WeakReference.h */; };
+		B1366D241968B3BA00B40CCC /* WeakReference.m in Sources */ = {isa = PBXBuildFile; fileRef = B1366D221968B3BA00B40CCC /* WeakReference.m */; };
+		B1366D251968B3BA00B40CCC /* WeakReference.m in Sources */ = {isa = PBXBuildFile; fileRef = B1366D221968B3BA00B40CCC /* WeakReference.m */; };
+		B1366D281968B42B00B40CCC /* NSView+Schwarzwald.h in Headers */ = {isa = PBXBuildFile; fileRef = B1366D261968B42B00B40CCC /* NSView+Schwarzwald.h */; };
+		B1366D291968B42B00B40CCC /* NSView+Schwarzwald.m in Sources */ = {isa = PBXBuildFile; fileRef = B1366D271968B42B00B40CCC /* NSView+Schwarzwald.m */; };
+		B1366D2C1968B47300B40CCC /* NSButton+Schwarzwald.h in Headers */ = {isa = PBXBuildFile; fileRef = B1366D2A1968B47300B40CCC /* NSButton+Schwarzwald.h */; };
+		B1366D2D1968B47300B40CCC /* NSButton+Schwarzwald.m in Sources */ = {isa = PBXBuildFile; fileRef = B1366D2B1968B47300B40CCC /* NSButton+Schwarzwald.m */; };
+		B1366D301968B4A900B40CCC /* NSWindow+Schwarzwald.h in Headers */ = {isa = PBXBuildFile; fileRef = B1366D2E1968B4A900B40CCC /* NSWindow+Schwarzwald.h */; };
+		B1366D311968B4A900B40CCC /* NSWindow+Schwarzwald.m in Sources */ = {isa = PBXBuildFile; fileRef = B1366D2F1968B4A900B40CCC /* NSWindow+Schwarzwald.m */; };
+		B1366D341968B51900B40CCC /* NSApplication+Schwarzwald.h in Headers */ = {isa = PBXBuildFile; fileRef = B1366D321968B51900B40CCC /* NSApplication+Schwarzwald.h */; };
+		B1366D351968B51900B40CCC /* NSApplication+Schwarzwald.m in Sources */ = {isa = PBXBuildFile; fileRef = B1366D331968B51900B40CCC /* NSApplication+Schwarzwald.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +54,16 @@
 		B1366D131968B31700B40CCC /* SchwarzwaldTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SchwarzwaldTests-Info.plist"; sourceTree = "<group>"; };
 		B1366D151968B31700B40CCC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B1366D171968B31700B40CCC /* SchwarzwaldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SchwarzwaldTests.m; sourceTree = "<group>"; };
+		B1366D211968B3BA00B40CCC /* WeakReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeakReference.h; sourceTree = "<group>"; };
+		B1366D221968B3BA00B40CCC /* WeakReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeakReference.m; sourceTree = "<group>"; };
+		B1366D261968B42B00B40CCC /* NSView+Schwarzwald.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+Schwarzwald.h"; sourceTree = "<group>"; };
+		B1366D271968B42B00B40CCC /* NSView+Schwarzwald.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+Schwarzwald.m"; sourceTree = "<group>"; };
+		B1366D2A1968B47300B40CCC /* NSButton+Schwarzwald.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSButton+Schwarzwald.h"; sourceTree = "<group>"; };
+		B1366D2B1968B47300B40CCC /* NSButton+Schwarzwald.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSButton+Schwarzwald.m"; sourceTree = "<group>"; };
+		B1366D2E1968B4A900B40CCC /* NSWindow+Schwarzwald.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSWindow+Schwarzwald.h"; sourceTree = "<group>"; };
+		B1366D2F1968B4A900B40CCC /* NSWindow+Schwarzwald.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSWindow+Schwarzwald.m"; sourceTree = "<group>"; };
+		B1366D321968B51900B40CCC /* NSApplication+Schwarzwald.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSApplication+Schwarzwald.h"; sourceTree = "<group>"; };
+		B1366D331968B51900B40CCC /* NSApplication+Schwarzwald.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSApplication+Schwarzwald.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,9 +130,19 @@
 		B1366CFC1968B31700B40CCC /* Schwarzwald */ = {
 			isa = PBXGroup;
 			children = (
+				B1366D321968B51900B40CCC /* NSApplication+Schwarzwald.h */,
+				B1366D331968B51900B40CCC /* NSApplication+Schwarzwald.m */,
+				B1366D2A1968B47300B40CCC /* NSButton+Schwarzwald.h */,
+				B1366D2B1968B47300B40CCC /* NSButton+Schwarzwald.m */,
+				B1366D261968B42B00B40CCC /* NSView+Schwarzwald.h */,
+				B1366D271968B42B00B40CCC /* NSView+Schwarzwald.m */,
+				B1366D2E1968B4A900B40CCC /* NSWindow+Schwarzwald.h */,
+				B1366D2F1968B4A900B40CCC /* NSWindow+Schwarzwald.m */,
 				B1366D031968B31700B40CCC /* Schwarzwald.h */,
 				B1366D041968B31700B40CCC /* Schwarzwald.m */,
 				B1366CFD1968B31700B40CCC /* Supporting Files */,
+				B1366D211968B3BA00B40CCC /* WeakReference.h */,
+				B1366D221968B3BA00B40CCC /* WeakReference.m */,
 			);
 			path = Schwarzwald;
 			sourceTree = "<group>";
@@ -151,6 +182,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1366D231968B3BA00B40CCC /* WeakReference.h in Headers */,
+				B1366D2C1968B47300B40CCC /* NSButton+Schwarzwald.h in Headers */,
+				B1366D301968B4A900B40CCC /* NSWindow+Schwarzwald.h in Headers */,
+				B1366D341968B51900B40CCC /* NSApplication+Schwarzwald.h in Headers */,
+				B1366D281968B42B00B40CCC /* NSView+Schwarzwald.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +286,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1366D051968B31700B40CCC /* Schwarzwald.m in Sources */,
+				B1366D311968B4A900B40CCC /* NSWindow+Schwarzwald.m in Sources */,
+				B1366D351968B51900B40CCC /* NSApplication+Schwarzwald.m in Sources */,
+				B1366D241968B3BA00B40CCC /* WeakReference.m in Sources */,
+				B1366D291968B42B00B40CCC /* NSView+Schwarzwald.m in Sources */,
+				B1366D2D1968B47300B40CCC /* NSButton+Schwarzwald.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1366D181968B31700B40CCC /* SchwarzwaldTests.m in Sources */,
+				B1366D251968B3BA00B40CCC /* WeakReference.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
