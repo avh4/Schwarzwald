@@ -24,8 +24,9 @@
 		B1366D2D1968B47300B40CCC /* NSButton+Schwarzwald.m in Sources */ = {isa = PBXBuildFile; fileRef = B1366D2B1968B47300B40CCC /* NSButton+Schwarzwald.m */; };
 		B1366D301968B4A900B40CCC /* NSWindow+Schwarzwald.h in Headers */ = {isa = PBXBuildFile; fileRef = B1366D2E1968B4A900B40CCC /* NSWindow+Schwarzwald.h */; };
 		B1366D311968B4A900B40CCC /* NSWindow+Schwarzwald.m in Sources */ = {isa = PBXBuildFile; fileRef = B1366D2F1968B4A900B40CCC /* NSWindow+Schwarzwald.m */; };
-		B1366D341968B51900B40CCC /* NSApplication+Schwarzwald.h in Headers */ = {isa = PBXBuildFile; fileRef = B1366D321968B51900B40CCC /* NSApplication+Schwarzwald.h */; };
+		B1366D341968B51900B40CCC /* NSApplication+Schwarzwald.h in Headers */ = {isa = PBXBuildFile; fileRef = B1366D321968B51900B40CCC /* NSApplication+Schwarzwald.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1366D351968B51900B40CCC /* NSApplication+Schwarzwald.m in Sources */ = {isa = PBXBuildFile; fileRef = B1366D331968B51900B40CCC /* NSApplication+Schwarzwald.m */; };
+		B1366D421968B7A500B40CCC /* Schwarzwald.h in Headers */ = {isa = PBXBuildFile; fileRef = B1366D031968B31700B40CCC /* Schwarzwald.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,6 +188,7 @@
 				B1366D301968B4A900B40CCC /* NSWindow+Schwarzwald.h in Headers */,
 				B1366D341968B51900B40CCC /* NSApplication+Schwarzwald.h in Headers */,
 				B1366D281968B42B00B40CCC /* NSView+Schwarzwald.h in Headers */,
+				B1366D421968B7A500B40CCC /* Schwarzwald.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +494,7 @@
 				B1366D1D1968B31700B40CCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B1366D1E1968B31700B40CCC /* Build configuration list for PBXNativeTarget "SchwarzwaldTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +503,7 @@
 				B1366D201968B31700B40CCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
