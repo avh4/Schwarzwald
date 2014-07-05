@@ -1,11 +1,3 @@
-//
-//  SchwarzwaldTests.m
-//  SchwarzwaldTests
-//
-//  Created by Aaron V. on 7/5/14.
-//  Copyright (c) 2014 Aaron VonderHaar. All rights reserved.
-//
-
 #import <XCTest/XCTest.h>
 
 @interface SchwarzwaldTests : XCTestCase
@@ -28,7 +20,7 @@
 
 - (void)testExample
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+//    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
 }
 
 @end
