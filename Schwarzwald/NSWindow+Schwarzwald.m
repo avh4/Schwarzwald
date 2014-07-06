@@ -29,6 +29,7 @@
 }
 
 - (NSButton *)findButtonWithText:(NSString *)text {
+  if (!self.isVisible) return nil;
   return [self.contentView findButtonWithText:text];
 }
 

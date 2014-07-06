@@ -20,6 +20,26 @@ describe(@"NSWindow", ^{
       [subject makeKeyWindow];
     });
   });
+
+  describe(@"-findButtonWithText", ^{
+    __block NSButton *button;
+
+    beforeEach(^{
+      button = nice_fake_for([NSButton class]);
+      spy_on(subject.contentView);
+      subject.contentView stub_method(@selector(findButtonWithText:)).with(@"Text").and_return(button);
+      subject.isVisible = YES;
+    });
+
+    it(@"should search the window's content view", ^{
+      [subject findButtonWithText:@"Text"] should be_same_instance_as(button);
+    });
+
+    it(@"when the window is not visible should return nil", ^{
+      subject.isVisible = NO;
+      [subject findButtonWithText:@"Text"] should be_nil;
+    });
+  });
 });
 
 SPEC_END
