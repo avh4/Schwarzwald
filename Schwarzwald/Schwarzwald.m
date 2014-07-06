@@ -8,6 +8,7 @@ NSMutableArray *activeWindows;
 @implementation Schwarzwald
 
 + (NSApplication *)initWithTestBundle:(NSString *)specBundleIdentifier mainPlist:(NSString *)appPlistFilename {
+  NSApp = nil;
   activeWindows = [NSMutableArray array];
 
   // Start the app
@@ -17,13 +18,16 @@ NSMutableArray *activeWindows;
   NSDictionary *infoDictionary = [NSDictionary dictionaryWithContentsOfFile:plistPath];
   Class principalClass = NSClassFromString([infoDictionary objectForKey:@"NSPrincipalClass"]);
   NSAssert([principalClass respondsToSelector:@selector(sharedApplication)], @"Principal class must implement sharedApplication.");
-  NSApplication *application = [principalClass sharedApplication];
+  NSApplication *application = [[principalClass alloc] init];
   if (!application) @throw [NSException exceptionWithName:@"SchwarzwaldInitializationException" reason:[NSString stringWithFormat:@"[%@ sharedApplication] returned nil", NSStringFromClass(principalClass)] userInfo:nil];
 
   // Load the nib file
   NSString *mainNibName = [infoDictionary objectForKey:@"NSMainNibFile"];
   NSNib *mainNib = [[NSNib alloc] initWithNibNamed:mainNibName bundle:specBundle];
   [mainNib instantiateWithOwner:application topLevelObjects:nil];
+
+  // Set the key window
+  [application.windows[0] makeKeyWindow];
 
   return application;
 }

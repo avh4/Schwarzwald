@@ -2,6 +2,7 @@
 #import "WeakReference.h"
 #import <objc/runtime.h>
 #import "Schwarzwald.h"
+#import "NSApplication+Schwarzwald.h"
 
 @interface Schwarzwald (Protected)
 
@@ -43,5 +44,16 @@
   [Schwarzwald addActiveWindow:self];
   [self __swizzled_orderFront:sender];
 }
+
+#pragma mark - Category overrides
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-protocol-method-implementation"
+
+- (void)makeKeyWindow {
+  [NSApplication sharedApplication].keyWindow = self;
+}
+
+#pragma clang diagnostic pop
 
 @end

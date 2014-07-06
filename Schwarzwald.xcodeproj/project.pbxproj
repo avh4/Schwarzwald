@@ -26,8 +26,15 @@
 		B1C60DF819690504003E3DEC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C60DF719690504003E3DEC /* SenTestingKit.framework */; };
 		B1C60DF919690504003E3DEC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1366CF61968B31700B40CCC /* Cocoa.framework */; };
 		B1C60DFF19690504003E3DEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1C60DFD19690504003E3DEC /* InfoPlist.strings */; };
-		B1C60E0119690504003E3DEC /* ExampleSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B1C60E0019690504003E3DEC /* ExampleSpec.mm */; };
 		B1C60E0519690504003E3DEC /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C60E0419690504003E3DEC /* Cedar.framework */; };
+		B1C60E0A196905CB003E3DEC /* NSApplication+SchwarzwaldSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B1C60E09196905CB003E3DEC /* NSApplication+SchwarzwaldSpec.mm */; };
+		B1C60E0B196907F1003E3DEC /* NSApplication+Schwarzwald.m in Sources */ = {isa = PBXBuildFile; fileRef = B1366D331968B51900B40CCC /* NSApplication+Schwarzwald.m */; };
+		B1C60E0C19690800003E3DEC /* NSButton+Schwarzwald.m in Sources */ = {isa = PBXBuildFile; fileRef = B1366D2B1968B47300B40CCC /* NSButton+Schwarzwald.m */; };
+		B1C60E0D19690800003E3DEC /* NSTimer+Schwarzwald.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C60DE51968D694003E3DEC /* NSTimer+Schwarzwald.m */; };
+		B1C60E0E19690800003E3DEC /* NSView+Schwarzwald.m in Sources */ = {isa = PBXBuildFile; fileRef = B1366D271968B42B00B40CCC /* NSView+Schwarzwald.m */; };
+		B1C60E0F19690800003E3DEC /* NSWindow+Schwarzwald.m in Sources */ = {isa = PBXBuildFile; fileRef = B1366D2F1968B4A900B40CCC /* NSWindow+Schwarzwald.m */; };
+		B1C60E1019690800003E3DEC /* Schwarzwald.m in Sources */ = {isa = PBXBuildFile; fileRef = B1366D041968B31700B40CCC /* Schwarzwald.m */; };
+		B1C60E1119690814003E3DEC /* WeakReference.m in Sources */ = {isa = PBXBuildFile; fileRef = B1366D221968B3BA00B40CCC /* WeakReference.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,10 +65,10 @@
 		B1C60DF719690504003E3DEC /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		B1C60DFC19690504003E3DEC /* SchwarzwaldSpecs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SchwarzwaldSpecs-Info.plist"; sourceTree = "<group>"; };
 		B1C60DFE19690504003E3DEC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B1C60E0019690504003E3DEC /* ExampleSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ExampleSpec.mm; sourceTree = "<group>"; };
 		B1C60E0219690504003E3DEC /* Rakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
 		B1C60E0319690504003E3DEC /* SchwarzwaldSpecs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SchwarzwaldSpecs-Prefix.pch"; sourceTree = "<group>"; };
 		B1C60E0419690504003E3DEC /* Cedar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cedar.framework; path = Frameworks/Cedar.framework; sourceTree = "<group>"; };
+		B1C60E09196905CB003E3DEC /* NSApplication+SchwarzwaldSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSApplication+SchwarzwaldSpec.mm"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,9 +169,9 @@
 			isa = PBXGroup;
 			children = (
 				B1C60E0419690504003E3DEC /* Cedar.framework */,
-				B1C60E0019690504003E3DEC /* ExampleSpec.mm */,
 				B1C60E0219690504003E3DEC /* Rakefile */,
 				B1C60DFB19690504003E3DEC /* Supporting Files */,
+				B1C60E09196905CB003E3DEC /* NSApplication+SchwarzwaldSpec.mm */,
 			);
 			path = SchwarzwaldSpecs;
 			sourceTree = "<group>";
@@ -330,7 +337,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1C60E0119690504003E3DEC /* ExampleSpec.mm in Sources */,
+				B1C60E0A196905CB003E3DEC /* NSApplication+SchwarzwaldSpec.mm in Sources */,
+				B1C60E1019690800003E3DEC /* Schwarzwald.m in Sources */,
+				B1C60E0E19690800003E3DEC /* NSView+Schwarzwald.m in Sources */,
+				B1C60E0B196907F1003E3DEC /* NSApplication+Schwarzwald.m in Sources */,
+				B1C60E0C19690800003E3DEC /* NSButton+Schwarzwald.m in Sources */,
+				B1C60E0D19690800003E3DEC /* NSTimer+Schwarzwald.m in Sources */,
+				B1C60E0F19690800003E3DEC /* NSWindow+Schwarzwald.m in Sources */,
+				B1C60E1119690814003E3DEC /* WeakReference.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
