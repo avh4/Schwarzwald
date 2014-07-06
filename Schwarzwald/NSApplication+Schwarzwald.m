@@ -22,6 +22,10 @@
   objc_setAssociatedObject(self, @selector(keyWindow), window, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
+- (NSArray *)visibleWindows {
+  return [self.windows filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"isVisible = YES"]];
+}
+
 #pragma mark - Category overrides
 
 #pragma clang diagnostic push
