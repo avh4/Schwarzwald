@@ -7,4 +7,6 @@
 + (NSArray *)visibleWindows;
 + (NSWindow *)visibleWindow;
 
++ (void)advanceMinutes:(NSInteger)minutes;
+
 @end

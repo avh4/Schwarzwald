@@ -1,5 +1,6 @@
 #import "Schwarzwald.h"
 #import "WeakReference.h"
+#import "NSTimer+Schwarzwald.h"
 
 NSMutableArray *activeWindows;
 
@@ -46,7 +47,14 @@ NSMutableArray *activeWindows;
 }
 
 + (void)addActiveWindow:(NSWindow *)window {
+  for (WeakReference *ref in activeWindows) {
+    if (ref.nonretainedObjectValue == window) return;
+  }
   [activeWindows addObject:[WeakReference weakReferenceWithObject:window]];
+}
+
++ (void)advanceMinutes:(NSInteger)minutes {
+  [NSTimer fireTimers];
 }
 
 @end
