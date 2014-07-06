@@ -38,6 +38,13 @@ NSMutableArray *activeWindows;
   return visibleWindows;
 }
 
++ (NSWindow *)visibleWindow {
+  NSArray *visibleWindows = [self visibleWindows];
+  if (visibleWindows.count < 1) @throw [NSException exceptionWithName:@"SchwarzwaldFailure" reason:@"No visible windows" userInfo:nil];
+  if (visibleWindows.count > 1) @throw [NSException exceptionWithName:@"SchwarzwaldFailure" reason:@"Expected one visible window, but found multiple visible windows" userInfo:nil];
+  return visibleWindows[0];
+}
+
 + (void)addActiveWindow:(NSWindow *)window {
   [activeWindows addObject:[WeakReference weakReferenceWithObject:window]];
 }

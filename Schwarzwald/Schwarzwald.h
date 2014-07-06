@@ -5,5 +5,6 @@
 + (NSApplication *)initWithTestBundle:(NSString *)specBundleIdentifier mainPlist:(NSString *)appPlistFilename;
 
 + (NSArray *)visibleWindows;
++ (NSWindow *)visibleWindow;
 
 @end
