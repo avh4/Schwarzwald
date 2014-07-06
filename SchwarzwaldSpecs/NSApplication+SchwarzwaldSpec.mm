@@ -1,4 +1,5 @@
 #import "NSApplication+Schwarzwald.h"
+#import "Schwarzwald.h"
 
 using namespace Cedar::Matchers;
 using namespace Cedar::Doubles;
@@ -9,8 +10,7 @@ describe(@"NSApplication", ^{
   __block NSApplication *subject;
 
   beforeEach(^{
-    NSApp = nil;
-    subject = [[NSApplication alloc] init];
+    subject = [Schwarzwald createApplication];
   });
 
   it(@"should be able to set the key window", ^{

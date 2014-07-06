@@ -4,10 +4,34 @@
 
 NSMutableArray *activeWindows;
 
+#define AntiARCRetain(...) void *retainedThing = (__bridge_retained void *)__VA_ARGS__; retainedThing = retainedThing
+#define AntiARCRelease(...) void *retainedThing = (__bridge void *) __VA_ARGS__; id unretainedThing = (__bridge_transfer id)retainedThing; unretainedThing = nil
+#define AntiARCRetainCount(obj) CFGetRetainCount((__bridge CFTypeRef)NSApp)
 
 @implementation Schwarzwald
 
-+ (NSApplication *)initWithTestBundle:(NSString *)specBundleIdentifier mainPlist:(NSString *)appPlistFilename {
++ (NSApplication *)createApplication {
+  return [self createApplication:[NSApplication class]];
+}
+
++ (NSApplication *)createApplication:(Class)applicationClass {
+  NSApplication *application;
+
+  // NSApp needs to be cleared because NSApplication has an internal check causing its init to throw if another NSApplication has previously been created (which it apparentlys checks by looking at NSApp.  However, there are memory-management problems (see below).
+  NSApp = nil;
+
+  application = [[applicationClass alloc] init];
+
+  // When we get to the point, there are two strong references to the application: local application, and global NSApp.  But somehow, the object's retain count seems to only be 1.  The local reference is returned and used by the test and is generally disposed of first, meaning that the `NSApp = nil` line above will over-release the object.  We retain it an extra time to allow this to work.
+  AntiARCRetain(NSApp);
+
+  if (!application) [[NSException exceptionWithName:@"SchwarzwaldInitializationException" reason:[NSString stringWithFormat:@"[[%@ alloc] init] returned nil", NSStringFromClass(applicationClass)] userInfo:nil] raise];
+  if (application != NSApp) [[NSException exceptionWithName:@"SchwarzwaldInternalError" reason:[NSString stringWithFormat:@"[[%@ alloc] init] did not set NSApp", NSStringFromClass(applicationClass)] userInfo:nil] raise];
+  // TODO: probably should also validate that [applicationClass sharedApplication] == [NSApplication sharedApplication] == NSApp
+  return application;
+}
+
++ (NSApplication *)createApplicationWithTestBundle:(NSString *)specBundleIdentifier mainPlist:(NSString *)appPlistFilename {
   NSApp = nil;
   activeWindows = [NSMutableArray array];
 
@@ -18,7 +42,7 @@ NSMutableArray *activeWindows;
   NSDictionary *infoDictionary = [NSDictionary dictionaryWithContentsOfFile:plistPath];
   Class principalClass = NSClassFromString([infoDictionary objectForKey:@"NSPrincipalClass"]);
   NSAssert([principalClass respondsToSelector:@selector(sharedApplication)], @"Principal class must implement sharedApplication.");
-  NSApplication *application = [[principalClass alloc] init];
+  NSApplication *application = [self createApplication:principalClass];
   if (!application) @throw [NSException exceptionWithName:@"SchwarzwaldInitializationException" reason:[NSString stringWithFormat:@"[%@ sharedApplication] returned nil", NSStringFromClass(principalClass)] userInfo:nil];
 
   // Load the nib file

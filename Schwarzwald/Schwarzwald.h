@@ -2,7 +2,9 @@
 
 @interface Schwarzwald : NSObject
 
-+ (NSApplication *)initWithTestBundle:(NSString *)specBundleIdentifier mainPlist:(NSString *)appPlistFilename;
++ (NSApplication *)createApplication;
++ (NSApplication *)createApplication:(Class)applicationClass;
++ (NSApplication *)createApplicationWithTestBundle:(NSString *)specBundleIdentifier mainPlist:(NSString *)appPlistFilename;
 
 + (NSArray *)visibleWindows;
 + (NSWindow *)visibleWindow;
