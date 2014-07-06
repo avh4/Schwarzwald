@@ -29,9 +29,25 @@
   return application;
 }
 
-+ (NSApplication *)createApplicationWithTestBundle:(NSString *)specBundleIdentifier mainPlist:(NSString *)appPlistFilename {
++ (NSBundle *)findTestBundle {
+  if ([NSBundle allBundles].count > 2) {
+    NSLog(@"WARNING: Schwarzwald: More than two bundles were found at runtime.  [Schwarzwald findTestBundle] may not work correctly.  Please file an issue at https://github.com/avh4/Schwarzwald/issues/new with the following details and whether or not it seems to be working:");
+    for (NSBundle *bundle in [NSBundle allBundles]) {
+      NSLog(@"WARNING: Schwarzwald: %@ bundleIdentifier=%@", bundle, [bundle bundleIdentifier]);
+    }
+    NSLog(@"WARNING: Schwarzwald: END OF DETAILS");
+  }
+  for (NSBundle *bundle in [NSBundle allBundles]) {
+    if ([bundle bundleIdentifier] == nil) continue;
+    if ([[bundle bundlePath] isEqualToString:@"/Applications/Xcode.app/Contents/Developer/Tools"]) continue;
+    return bundle;
+  }
+  @throw [NSException exceptionWithName:@"SchwarzwaldInitializationException" reason:[NSString stringWithFormat:@"No appropriate test bundle found.  [Schwarzwald findTestBundle] may need to be updated."] userInfo:nil];
+}
+
++ (NSApplication *)createApplicationWithMainPlist:(NSString *)appPlistFilename {
   // Start the app
-  NSBundle *specBundle = [NSBundle bundleWithIdentifier:specBundleIdentifier];
+  NSBundle *specBundle = [self findTestBundle];
   NSString *plistPath =
   [specBundle pathForResource:appPlistFilename ofType:@"plist"];
   NSDictionary *infoDictionary = [NSDictionary dictionaryWithContentsOfFile:plistPath];

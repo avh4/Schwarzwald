@@ -6,7 +6,7 @@ Integration testing for OS X.
  - Add your main app's Info.plist file to your test target
 
 ```objc
-NSApplication *application = [Schwarzwald createApplicationWithTestBundle:@"com.example.MyAppTests" mainPlist:@"MyApp-Info"];
+NSApplication *application = [Schwarzwald createApplicationWithMainPlist:@"MyApp-Info"];
 
 [application click:@"My Button"];
 

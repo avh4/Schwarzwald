@@ -4,7 +4,7 @@
 
 + (NSApplication *)createApplication;
 + (NSApplication *)createApplication:(Class)applicationClass;
-+ (NSApplication *)createApplicationWithTestBundle:(NSString *)specBundleIdentifier mainPlist:(NSString *)appPlistFilename;
++ (NSApplication *)createApplicationWithMainPlist:(NSString *)appPlistFilename;
 
 + (void)advanceMinutes:(NSInteger)minutes;
 
