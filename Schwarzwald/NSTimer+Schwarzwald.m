@@ -9,7 +9,9 @@ NSMutableArray *activeTimers;
 }
 
 + (void)fireTimers {
-  [activeTimers[0] fire];
+  for (NSTimer *timer in activeTimers) {
+    [timer fire];
+  }
 }
 
 #pragma mark - Category overrides

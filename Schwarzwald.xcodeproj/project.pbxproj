@@ -21,6 +21,7 @@
 		B1366D341968B51900B40CCC /* NSApplication+Schwarzwald.h in Headers */ = {isa = PBXBuildFile; fileRef = B1366D321968B51900B40CCC /* NSApplication+Schwarzwald.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1366D351968B51900B40CCC /* NSApplication+Schwarzwald.m in Sources */ = {isa = PBXBuildFile; fileRef = B1366D331968B51900B40CCC /* NSApplication+Schwarzwald.m */; };
 		B1366D421968B7A500B40CCC /* Schwarzwald.h in Headers */ = {isa = PBXBuildFile; fileRef = B1366D031968B31700B40CCC /* Schwarzwald.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B14B7F27196A0CFB0068D44D /* NSTimer+SchwarzwaldSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B14B7F26196A0CFB0068D44D /* NSTimer+SchwarzwaldSpec.mm */; };
 		B186699C19690D4900F3C630 /* NSWindow+SchwarzwaldSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B186699B19690D4900F3C630 /* NSWindow+SchwarzwaldSpec.mm */; };
 		B1C60DE61968D694003E3DEC /* NSTimer+Schwarzwald.h in Headers */ = {isa = PBXBuildFile; fileRef = B1C60DE41968D694003E3DEC /* NSTimer+Schwarzwald.h */; };
 		B1C60DE71968D694003E3DEC /* NSTimer+Schwarzwald.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C60DE51968D694003E3DEC /* NSTimer+Schwarzwald.m */; };
@@ -60,6 +61,7 @@
 		B1366D2F1968B4A900B40CCC /* NSWindow+Schwarzwald.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSWindow+Schwarzwald.m"; sourceTree = "<group>"; };
 		B1366D321968B51900B40CCC /* NSApplication+Schwarzwald.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSApplication+Schwarzwald.h"; sourceTree = "<group>"; };
 		B1366D331968B51900B40CCC /* NSApplication+Schwarzwald.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSApplication+Schwarzwald.m"; sourceTree = "<group>"; };
+		B14B7F26196A0CFB0068D44D /* NSTimer+SchwarzwaldSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSTimer+SchwarzwaldSpec.mm"; sourceTree = "<group>"; };
 		B186699B19690D4900F3C630 /* NSWindow+SchwarzwaldSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSWindow+SchwarzwaldSpec.mm"; sourceTree = "<group>"; };
 		B1C60DE41968D694003E3DEC /* NSTimer+Schwarzwald.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Schwarzwald.h"; sourceTree = "<group>"; };
 		B1C60DE51968D694003E3DEC /* NSTimer+Schwarzwald.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Schwarzwald.m"; sourceTree = "<group>"; };
@@ -171,10 +173,11 @@
 			isa = PBXGroup;
 			children = (
 				B1C60E0419690504003E3DEC /* Cedar.framework */,
+				B1C60E09196905CB003E3DEC /* NSApplication+SchwarzwaldSpec.mm */,
+				B14B7F26196A0CFB0068D44D /* NSTimer+SchwarzwaldSpec.mm */,
+				B186699B19690D4900F3C630 /* NSWindow+SchwarzwaldSpec.mm */,
 				B1C60E0219690504003E3DEC /* Rakefile */,
 				B1C60DFB19690504003E3DEC /* Supporting Files */,
-				B1C60E09196905CB003E3DEC /* NSApplication+SchwarzwaldSpec.mm */,
-				B186699B19690D4900F3C630 /* NSWindow+SchwarzwaldSpec.mm */,
 			);
 			path = SchwarzwaldSpecs;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				B1C60E0B196907F1003E3DEC /* NSApplication+Schwarzwald.m in Sources */,
 				B1C60E0C19690800003E3DEC /* NSButton+Schwarzwald.m in Sources */,
 				B1C60E0D19690800003E3DEC /* NSTimer+Schwarzwald.m in Sources */,
+				B14B7F27196A0CFB0068D44D /* NSTimer+SchwarzwaldSpec.mm in Sources */,
 				B1C60E0F19690800003E3DEC /* NSWindow+Schwarzwald.m in Sources */,
 				B1C60E1119690814003E3DEC /* WeakReference.m in Sources */,
 				B186699C19690D4900F3C630 /* NSWindow+SchwarzwaldSpec.mm in Sources */,
