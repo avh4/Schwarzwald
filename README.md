@@ -6,11 +6,11 @@ Integration testing for OS X.
  - Add your main app's Info.plist file to your test target
 
 ```objc
-NSApplication *application = [Schwarzwald initWithTestBundle:@"com.example.MyAppTests" mainPlist:@"MyApp-Info"];
+NSApplication *application = [Schwarzwald createApplicationWithTestBundle:@"com.example.MyAppTests" mainPlist:@"MyApp-Info"];
 
 [application click:@"My Button"];
 
-[Schwarzwald visibleWindow].title should equal(@"My App");
+application.keyWindow.title should equal(@"My App");
 ```
 
 ## Implementation Notes

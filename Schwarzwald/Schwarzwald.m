@@ -2,8 +2,6 @@
 #import "WeakReference.h"
 #import "NSTimer+Schwarzwald.h"
 
-NSMutableArray *activeWindows;
-
 #define AntiARCRetain(...) void *retainedThing = (__bridge_retained void *)__VA_ARGS__; retainedThing = retainedThing
 #define AntiARCRelease(...) void *retainedThing = (__bridge void *) __VA_ARGS__; id unretainedThing = (__bridge_transfer id)retainedThing; unretainedThing = nil
 #define AntiARCRetainCount(obj) CFGetRetainCount((__bridge CFTypeRef)NSApp)
@@ -32,9 +30,6 @@ NSMutableArray *activeWindows;
 }
 
 + (NSApplication *)createApplicationWithTestBundle:(NSString *)specBundleIdentifier mainPlist:(NSString *)appPlistFilename {
-  NSApp = nil;
-  activeWindows = [NSMutableArray array];
-
   // Start the app
   NSBundle *specBundle = [NSBundle bundleWithIdentifier:specBundleIdentifier];
   NSString *plistPath =
@@ -51,34 +46,10 @@ NSMutableArray *activeWindows;
   [mainNib instantiateWithOwner:application topLevelObjects:nil];
 
   // Set the key window
+  // TODO: there's probably more logic to simulate
   [application.windows[0] makeKeyWindow];
 
   return application;
-}
-
-+ (NSArray *)visibleWindows {
-  NSMutableArray *visibleWindows = [NSMutableArray array];
-  for (WeakReference *ref in activeWindows) {
-    NSWindow *window = ref.nonretainedObjectValue;
-    if ([window isVisible]) {
-      [visibleWindows addObject:window];
-    }
-  }
-  return visibleWindows;
-}
-
-+ (NSWindow *)visibleWindow {
-  NSArray *visibleWindows = [self visibleWindows];
-  if (visibleWindows.count < 1) @throw [NSException exceptionWithName:@"SchwarzwaldFailure" reason:@"No visible windows" userInfo:nil];
-  if (visibleWindows.count > 1) @throw [NSException exceptionWithName:@"SchwarzwaldFailure" reason:@"Expected one visible window, but found multiple visible windows" userInfo:nil];
-  return visibleWindows[0];
-}
-
-+ (void)addActiveWindow:(NSWindow *)window {
-  for (WeakReference *ref in activeWindows) {
-    if (ref.nonretainedObjectValue == window) return;
-  }
-  [activeWindows addObject:[WeakReference weakReferenceWithObject:window]];
 }
 
 + (void)advanceMinutes:(NSInteger)minutes {

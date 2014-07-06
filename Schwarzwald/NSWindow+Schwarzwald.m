@@ -4,12 +4,6 @@
 #import "Schwarzwald.h"
 #import "NSApplication+Schwarzwald.h"
 
-@interface Schwarzwald (Protected)
-
-+ (void)addActiveWindow:(NSWindow *)window;
-
-@end
-
 @implementation NSWindow (Schwarzwald)
 
 + (void)load {
@@ -41,7 +35,6 @@
 #pragma mark - Swizzled methods
 
 - (void)__swizzled_orderFront:(id)sender {
-  [Schwarzwald addActiveWindow:self];
   [self __swizzled_orderFront:sender];
 }
 
