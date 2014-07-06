@@ -2,8 +2,8 @@
 #import "WeakReference.h"
 #import "NSTimer+Schwarzwald.h"
 
-#define ARCRetain(...) void *retainedThing = (__bridge_retained void *)__VA_ARGS__; retainedThing = retainedThing
-#define ARCRelease(...) void *retainedThing = (__bridge void *) __VA_ARGS__; id unretainedThing = (__bridge_transfer id)retainedThing; unretainedThing = nil
+#define ARCRetain(...) { void *retainedThing = (__bridge_retained void *)__VA_ARGS__; retainedThing = retainedThing; }
+#define ARCRelease(...) { void *retainedThing = (__bridge void *) __VA_ARGS__; id unretainedThing = (__bridge_transfer id)retainedThing; unretainedThing = nil; }
 #define ARCRetainCount(obj) CFGetRetainCount((__bridge CFTypeRef)NSApp)
 
 @implementation Schwarzwald
@@ -22,6 +22,7 @@
 
   // When we get to the point, there are two strong references to the application: local application, and global NSApp.  But somehow, the object's retain count is only 1.  The local reference is returned and used by the test and is generally disposed of first, meaning that the `NSApp = nil` line above will over-release the object.  We retain it an extra time to allow this to work.
   ARCRetain(NSApp);
+  ARCRetain(NSApp);  // TODO: this is incorrect and causes a memory leak, but without it there is race condition that causes the autorelease drain in Cedar to get a BAD_ACCESS sometimes
 
   if (!application) [[NSException exceptionWithName:@"SchwarzwaldInitializationException" reason:[NSString stringWithFormat:@"[[%@ alloc] init] returned nil", NSStringFromClass(applicationClass)] userInfo:nil] raise];
   if (application != NSApp) [[NSException exceptionWithName:@"SchwarzwaldInternalError" reason:[NSString stringWithFormat:@"[[%@ alloc] init] did not set NSApp", NSStringFromClass(applicationClass)] userInfo:nil] raise];
