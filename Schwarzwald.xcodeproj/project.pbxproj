@@ -10,14 +10,8 @@
 		B1366CF71968B31700B40CCC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1366CF61968B31700B40CCC /* Cocoa.framework */; };
 		B1366D011968B31700B40CCC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1366CFF1968B31700B40CCC /* InfoPlist.strings */; };
 		B1366D051968B31700B40CCC /* Schwarzwald.m in Sources */ = {isa = PBXBuildFile; fileRef = B1366D041968B31700B40CCC /* Schwarzwald.m */; };
-		B1366D0C1968B31700B40CCC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1366D0B1968B31700B40CCC /* XCTest.framework */; };
-		B1366D0D1968B31700B40CCC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1366CF61968B31700B40CCC /* Cocoa.framework */; };
-		B1366D101968B31700B40CCC /* Schwarzwald.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1366CF31968B31700B40CCC /* Schwarzwald.framework */; };
-		B1366D161968B31700B40CCC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1366D141968B31700B40CCC /* InfoPlist.strings */; };
-		B1366D181968B31700B40CCC /* SchwarzwaldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1366D171968B31700B40CCC /* SchwarzwaldTests.m */; };
 		B1366D231968B3BA00B40CCC /* WeakReference.h in Headers */ = {isa = PBXBuildFile; fileRef = B1366D211968B3BA00B40CCC /* WeakReference.h */; };
 		B1366D241968B3BA00B40CCC /* WeakReference.m in Sources */ = {isa = PBXBuildFile; fileRef = B1366D221968B3BA00B40CCC /* WeakReference.m */; };
-		B1366D251968B3BA00B40CCC /* WeakReference.m in Sources */ = {isa = PBXBuildFile; fileRef = B1366D221968B3BA00B40CCC /* WeakReference.m */; };
 		B1366D281968B42B00B40CCC /* NSView+Schwarzwald.h in Headers */ = {isa = PBXBuildFile; fileRef = B1366D261968B42B00B40CCC /* NSView+Schwarzwald.h */; };
 		B1366D291968B42B00B40CCC /* NSView+Schwarzwald.m in Sources */ = {isa = PBXBuildFile; fileRef = B1366D271968B42B00B40CCC /* NSView+Schwarzwald.m */; };
 		B1366D2C1968B47300B40CCC /* NSButton+Schwarzwald.h in Headers */ = {isa = PBXBuildFile; fileRef = B1366D2A1968B47300B40CCC /* NSButton+Schwarzwald.h */; };
@@ -29,17 +23,12 @@
 		B1366D421968B7A500B40CCC /* Schwarzwald.h in Headers */ = {isa = PBXBuildFile; fileRef = B1366D031968B31700B40CCC /* Schwarzwald.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1C60DE61968D694003E3DEC /* NSTimer+Schwarzwald.h in Headers */ = {isa = PBXBuildFile; fileRef = B1C60DE41968D694003E3DEC /* NSTimer+Schwarzwald.h */; };
 		B1C60DE71968D694003E3DEC /* NSTimer+Schwarzwald.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C60DE51968D694003E3DEC /* NSTimer+Schwarzwald.m */; };
+		B1C60DF819690504003E3DEC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C60DF719690504003E3DEC /* SenTestingKit.framework */; };
+		B1C60DF919690504003E3DEC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1366CF61968B31700B40CCC /* Cocoa.framework */; };
+		B1C60DFF19690504003E3DEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1C60DFD19690504003E3DEC /* InfoPlist.strings */; };
+		B1C60E0119690504003E3DEC /* ExampleSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B1C60E0019690504003E3DEC /* ExampleSpec.mm */; };
+		B1C60E0519690504003E3DEC /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C60E0419690504003E3DEC /* Cedar.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		B1366D0E1968B31700B40CCC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B1366CEA1968B31600B40CCC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B1366CF21968B31700B40CCC;
-			remoteInfo = Schwarzwald;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B1366CF31968B31700B40CCC /* Schwarzwald.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Schwarzwald.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,11 +41,7 @@
 		B1366D021968B31700B40CCC /* Schwarzwald-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Schwarzwald-Prefix.pch"; sourceTree = "<group>"; };
 		B1366D031968B31700B40CCC /* Schwarzwald.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Schwarzwald.h; sourceTree = "<group>"; };
 		B1366D041968B31700B40CCC /* Schwarzwald.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Schwarzwald.m; sourceTree = "<group>"; };
-		B1366D0A1968B31700B40CCC /* SchwarzwaldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchwarzwaldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1366D0B1968B31700B40CCC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		B1366D131968B31700B40CCC /* SchwarzwaldTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SchwarzwaldTests-Info.plist"; sourceTree = "<group>"; };
-		B1366D151968B31700B40CCC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B1366D171968B31700B40CCC /* SchwarzwaldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SchwarzwaldTests.m; sourceTree = "<group>"; };
 		B1366D211968B3BA00B40CCC /* WeakReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeakReference.h; sourceTree = "<group>"; };
 		B1366D221968B3BA00B40CCC /* WeakReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeakReference.m; sourceTree = "<group>"; };
 		B1366D261968B42B00B40CCC /* NSView+Schwarzwald.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+Schwarzwald.h"; sourceTree = "<group>"; };
@@ -69,6 +54,14 @@
 		B1366D331968B51900B40CCC /* NSApplication+Schwarzwald.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSApplication+Schwarzwald.m"; sourceTree = "<group>"; };
 		B1C60DE41968D694003E3DEC /* NSTimer+Schwarzwald.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Schwarzwald.h"; sourceTree = "<group>"; };
 		B1C60DE51968D694003E3DEC /* NSTimer+Schwarzwald.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Schwarzwald.m"; sourceTree = "<group>"; };
+		B1C60DF619690504003E3DEC /* SchwarzwaldSpecs.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchwarzwaldSpecs.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1C60DF719690504003E3DEC /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		B1C60DFC19690504003E3DEC /* SchwarzwaldSpecs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SchwarzwaldSpecs-Info.plist"; sourceTree = "<group>"; };
+		B1C60DFE19690504003E3DEC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B1C60E0019690504003E3DEC /* ExampleSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ExampleSpec.mm; sourceTree = "<group>"; };
+		B1C60E0219690504003E3DEC /* Rakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
+		B1C60E0319690504003E3DEC /* SchwarzwaldSpecs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SchwarzwaldSpecs-Prefix.pch"; sourceTree = "<group>"; };
+		B1C60E0419690504003E3DEC /* Cedar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cedar.framework; path = Frameworks/Cedar.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,13 +73,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B1366D071968B31700B40CCC /* Frameworks */ = {
+		B1C60DF119690504003E3DEC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1366D101968B31700B40CCC /* Schwarzwald.framework in Frameworks */,
-				B1366D0D1968B31700B40CCC /* Cocoa.framework in Frameworks */,
-				B1366D0C1968B31700B40CCC /* XCTest.framework in Frameworks */,
+				B1C60DF919690504003E3DEC /* Cocoa.framework in Frameworks */,
+				B1C60DF819690504003E3DEC /* SenTestingKit.framework in Frameworks */,
+				B1C60E0519690504003E3DEC /* Cedar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				B1366CFC1968B31700B40CCC /* Schwarzwald */,
-				B1366D111968B31700B40CCC /* SchwarzwaldTests */,
+				B1C60DFA19690504003E3DEC /* SchwarzwaldSpecs */,
 				B1366CF51968B31700B40CCC /* Frameworks */,
 				B1366CF41968B31700B40CCC /* Products */,
 			);
@@ -107,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				B1366CF31968B31700B40CCC /* Schwarzwald.framework */,
-				B1366D0A1968B31700B40CCC /* SchwarzwaldTests.xctest */,
+				B1C60DF619690504003E3DEC /* SchwarzwaldSpecs.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,6 +110,7 @@
 			children = (
 				B1366CF61968B31700B40CCC /* Cocoa.framework */,
 				B1366D0B1968B31700B40CCC /* XCTest.framework */,
+				B1C60DF719690504003E3DEC /* SenTestingKit.framework */,
 				B1366CF81968B31700B40CCC /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -164,20 +158,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B1366D111968B31700B40CCC /* SchwarzwaldTests */ = {
+		B1C60DFA19690504003E3DEC /* SchwarzwaldSpecs */ = {
 			isa = PBXGroup;
 			children = (
-				B1366D171968B31700B40CCC /* SchwarzwaldTests.m */,
-				B1366D121968B31700B40CCC /* Supporting Files */,
+				B1C60E0419690504003E3DEC /* Cedar.framework */,
+				B1C60E0019690504003E3DEC /* ExampleSpec.mm */,
+				B1C60E0219690504003E3DEC /* Rakefile */,
+				B1C60DFB19690504003E3DEC /* Supporting Files */,
 			);
-			path = SchwarzwaldTests;
+			path = SchwarzwaldSpecs;
 			sourceTree = "<group>";
 		};
-		B1366D121968B31700B40CCC /* Supporting Files */ = {
+		B1C60DFB19690504003E3DEC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B1366D131968B31700B40CCC /* SchwarzwaldTests-Info.plist */,
-				B1366D141968B31700B40CCC /* InfoPlist.strings */,
+				B1C60DFC19690504003E3DEC /* SchwarzwaldSpecs-Info.plist */,
+				B1C60DFD19690504003E3DEC /* InfoPlist.strings */,
+				B1C60E0319690504003E3DEC /* SchwarzwaldSpecs-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -220,23 +217,24 @@
 			productReference = B1366CF31968B31700B40CCC /* Schwarzwald.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B1366D091968B31700B40CCC /* SchwarzwaldTests */ = {
+		B1C60DF519690504003E3DEC /* SchwarzwaldSpecs */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B1366D1E1968B31700B40CCC /* Build configuration list for PBXNativeTarget "SchwarzwaldTests" */;
+			buildConfigurationList = B1C60E0619690505003E3DEC /* Build configuration list for PBXNativeTarget "SchwarzwaldSpecs" */;
 			buildPhases = (
-				B1366D061968B31700B40CCC /* Sources */,
-				B1366D071968B31700B40CCC /* Frameworks */,
-				B1366D081968B31700B40CCC /* Resources */,
+				B1C60DF019690504003E3DEC /* Sources */,
+				B1C60DF119690504003E3DEC /* Frameworks */,
+				B1C60DF219690504003E3DEC /* Resources */,
+				B1C60DF319690504003E3DEC /* ShellScript */,
+				B1C60DF419690504003E3DEC /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B1366D0F1968B31700B40CCC /* PBXTargetDependency */,
 			);
-			name = SchwarzwaldTests;
-			productName = SchwarzwaldTests;
-			productReference = B1366D0A1968B31700B40CCC /* SchwarzwaldTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = SchwarzwaldSpecs;
+			productName = SchwarzwaldSpecs;
+			productReference = B1C60DF619690504003E3DEC /* SchwarzwaldSpecs.octest */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -246,11 +244,6 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Aaron VonderHaar";
-				TargetAttributes = {
-					B1366D091968B31700B40CCC = {
-						TestTargetID = B1366CF21968B31700B40CCC;
-					};
-				};
 			};
 			buildConfigurationList = B1366CED1968B31600B40CCC /* Build configuration list for PBXProject "Schwarzwald" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -265,7 +258,7 @@
 			projectRoot = "";
 			targets = (
 				B1366CF21968B31700B40CCC /* Schwarzwald */,
-				B1366D091968B31700B40CCC /* SchwarzwaldTests */,
+				B1C60DF519690504003E3DEC /* SchwarzwaldSpecs */,
 			);
 		};
 /* End PBXProject section */
@@ -279,15 +272,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B1366D081968B31700B40CCC /* Resources */ = {
+		B1C60DF219690504003E3DEC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1366D161968B31700B40CCC /* InfoPlist.strings in Resources */,
+				B1C60DFF19690504003E3DEC /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B1C60DF319690504003E3DEC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp -R \"${TARGET_NAME}\"/Frameworks/Cedar.framework \"${BUILT_PRODUCTS_DIR}\"";
+		};
+		B1C60DF419690504003E3DEC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B1366CEE1968B31700B40CCC /* Sources */ = {
@@ -304,24 +326,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B1366D061968B31700B40CCC /* Sources */ = {
+		B1C60DF019690504003E3DEC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1366D181968B31700B40CCC /* SchwarzwaldTests.m in Sources */,
-				B1366D251968B3BA00B40CCC /* WeakReference.m in Sources */,
+				B1C60E0119690504003E3DEC /* ExampleSpec.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B1366D0F1968B31700B40CCC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B1366CF21968B31700B40CCC /* Schwarzwald */;
-			targetProxy = B1366D0E1968B31700B40CCC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B1366CFF1968B31700B40CCC /* InfoPlist.strings */ = {
@@ -332,10 +345,10 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		B1366D141968B31700B40CCC /* InfoPlist.strings */ = {
+		B1C60DFD19690504003E3DEC /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B1366D151968B31700B40CCC /* en */,
+				B1C60DFE19690504003E3DEC /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -443,43 +456,39 @@
 			};
 			name = Release;
 		};
-		B1366D1F1968B31700B40CCC /* Debug */ = {
+		B1C60E0719690505003E3DEC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Schwarzwald.framework/Versions/A/Schwarzwald";
-				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
+					"$(PROJECT_DIR)/SchwarzwaldSpecs/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Schwarzwald/Schwarzwald-Prefix.pch";
+				GCC_PREFIX_HEADER = "SchwarzwaldSpecs/SchwarzwaldSpecs-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "SchwarzwaldTests/SchwarzwaldTests-Info.plist";
+				INFOPLIST_FILE = "SchwarzwaldSpecs/SchwarzwaldSpecs-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
-		B1366D201968B31700B40CCC /* Release */ = {
+		B1C60E0819690505003E3DEC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Schwarzwald.framework/Versions/A/Schwarzwald";
-				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
+					"$(PROJECT_DIR)/SchwarzwaldSpecs/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Schwarzwald/Schwarzwald-Prefix.pch";
-				INFOPLIST_FILE = "SchwarzwaldTests/SchwarzwaldTests-Info.plist";
+				GCC_PREFIX_HEADER = "SchwarzwaldSpecs/SchwarzwaldSpecs-Prefix.pch";
+				INFOPLIST_FILE = "SchwarzwaldSpecs/SchwarzwaldSpecs-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -504,14 +513,13 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B1366D1E1968B31700B40CCC /* Build configuration list for PBXNativeTarget "SchwarzwaldTests" */ = {
+		B1C60E0619690505003E3DEC /* Build configuration list for PBXNativeTarget "SchwarzwaldSpecs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B1366D1F1968B31700B40CCC /* Debug */,
-				B1366D201968B31700B40CCC /* Release */,
+				B1C60E0719690505003E3DEC /* Debug */,
+				B1C60E0819690505003E3DEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
