@@ -6,6 +6,6 @@
 + (NSApplication *)createApplication:(Class)applicationClass;
 + (NSApplication *)createApplicationWithMainPlist:(NSString *)appPlistFilename;
 
-+ (void)advanceMinutes:(NSInteger)minutes;
++ (void)advanceTimeByMinutes:(NSInteger)minutes;
 
 @end

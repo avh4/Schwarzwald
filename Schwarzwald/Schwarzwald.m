@@ -69,7 +69,7 @@
   return application;
 }
 
-+ (void)advanceMinutes:(NSInteger)minutes {
++ (void)advanceTimeByMinutes:(NSInteger)minutes {
   [NSTimer fireTimers];
 }
 
