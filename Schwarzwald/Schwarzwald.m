@@ -48,25 +48,31 @@
   @throw [NSException exceptionWithName:@"SchwarzwaldInitializationException" reason:[NSString stringWithFormat:@"No appropriate test bundle found.  [Schwarzwald findTestBundle] may need to be updated."] userInfo:nil];
 }
 
-+ (NSApplication *)createApplicationWithMainPlist:(NSString *)appPlistFilename {
-  // Start the app
-  NSBundle *specBundle = [self findTestBundle];
-  NSString *plistPath =
-  [specBundle pathForResource:appPlistFilename ofType:@"plist"];
-  NSDictionary *infoDictionary = [NSDictionary dictionaryWithContentsOfFile:plistPath];
-  Class principalClass = NSClassFromString([infoDictionary objectForKey:@"NSPrincipalClass"]);
++ (NSApplication *)createApplication:(Class)principalClass mainNibName:(NSString *)mainNibName {
   NSApplication *application = [self createApplication:principalClass];
-
-  // Load the nib file
-  NSString *mainNibName = [infoDictionary objectForKey:@"NSMainNibFile"];
-  NSNib *mainNib = [[NSNib alloc] initWithNibNamed:mainNibName bundle:specBundle];
-  [mainNib instantiateWithOwner:application topLevelObjects:nil];
+  [self loadMainNib:mainNibName application:application];
 
   // Set the key window
   // TODO: there's probably more logic to simulate
   [application.windows[0] makeKeyWindow];
 
   return application;
+}
+
++ (NSApplication *)createApplicationWithMainPlist:(NSString *)appPlistFilename {
+  NSBundle *specBundle = [self findTestBundle];
+  NSString *plistPath = [specBundle pathForResource:appPlistFilename ofType:@"plist"];
+  NSDictionary *infoDictionary = [NSDictionary dictionaryWithContentsOfFile:plistPath];
+  Class principalClass = NSClassFromString([infoDictionary objectForKey:@"NSPrincipalClass"]);
+  NSString *mainNibName = [infoDictionary objectForKey:@"NSMainNibFile"];
+
+  return [self createApplication:principalClass mainNibName:mainNibName];
+}
+
++ (void)loadMainNib:(NSString *)mainNibName application:(NSApplication *)application {
+  NSBundle *specBundle = [self findTestBundle];
+  NSNib *mainNib = [[NSNib alloc] initWithNibNamed:mainNibName bundle:specBundle];
+  [mainNib instantiateWithOwner:application topLevelObjects:nil];
 }
 
 + (void)advanceTimeByMinutes:(NSInteger)minutes {
