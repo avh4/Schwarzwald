@@ -12,20 +12,22 @@
   return [self createApplication:[NSApplication class]];
 }
 
-+ (NSApplication *)createApplication:(Class)applicationClass {
++ (NSApplication *)createApplication:(Class)principalClass {
+  NSAssert([principalClass respondsToSelector:@selector(sharedApplication)], @"Principal class must implement sharedApplication.");
+
   NSApplication *application;
 
   // NSApp needs to be cleared because NSApplication has an internal check causing its init to throw if another NSApplication has previously been created (which it apparentlys checks by looking at NSApp.  However, there are memory-management problems (see below).
   NSApp = nil;
 
-  application = [[applicationClass alloc] init];
+  application = [[principalClass alloc] init];
 
   // When we get to the point, there are two strong references to the application: local application, and global NSApp.  But somehow, the object's retain count is only 1.  The local reference is returned and used by the test and is generally disposed of first, meaning that the `NSApp = nil` line above will over-release the object.  We retain it an extra time to allow this to work.
   ARCRetain(NSApp);
   ARCRetain(NSApp);  // TODO: this is incorrect and causes a memory leak, but without it there is race condition that causes the autorelease drain in Cedar to get a BAD_ACCESS sometimes
 
-  if (!application) [[NSException exceptionWithName:@"SchwarzwaldInitializationException" reason:[NSString stringWithFormat:@"[[%@ alloc] init] returned nil", NSStringFromClass(applicationClass)] userInfo:nil] raise];
-  if (application != NSApp) [[NSException exceptionWithName:@"SchwarzwaldInternalError" reason:[NSString stringWithFormat:@"[[%@ alloc] init] did not set NSApp", NSStringFromClass(applicationClass)] userInfo:nil] raise];
+  if (!application) [[NSException exceptionWithName:@"SchwarzwaldInitializationException" reason:[NSString stringWithFormat:@"[[%@ alloc] init] returned nil", NSStringFromClass(principalClass)] userInfo:nil] raise];
+  if (application != NSApp) [[NSException exceptionWithName:@"SchwarzwaldInternalError" reason:[NSString stringWithFormat:@"[[%@ alloc] init] did not set NSApp", NSStringFromClass(principalClass)] userInfo:nil] raise];
   // TODO: probably should also validate that [applicationClass sharedApplication] == [NSApplication sharedApplication] == NSApp
   return application;
 }
@@ -53,9 +55,7 @@
   [specBundle pathForResource:appPlistFilename ofType:@"plist"];
   NSDictionary *infoDictionary = [NSDictionary dictionaryWithContentsOfFile:plistPath];
   Class principalClass = NSClassFromString([infoDictionary objectForKey:@"NSPrincipalClass"]);
-  NSAssert([principalClass respondsToSelector:@selector(sharedApplication)], @"Principal class must implement sharedApplication.");
   NSApplication *application = [self createApplication:principalClass];
-  if (!application) @throw [NSException exceptionWithName:@"SchwarzwaldInitializationException" reason:[NSString stringWithFormat:@"[%@ sharedApplication] returned nil", NSStringFromClass(principalClass)] userInfo:nil];
 
   // Load the nib file
   NSString *mainNibName = [infoDictionary objectForKey:@"NSMainNibFile"];
