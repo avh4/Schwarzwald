@@ -1,12 +1,11 @@
 #import "Schwarzwald.h"
 #import "WeakReference.h"
 #import "NSTimer+Schwarzwald.h"
+#import "SWAssert.h"
 
 #define ARCRetain(...) { void *retainedThing = (__bridge_retained void *)__VA_ARGS__; retainedThing = retainedThing; }
 #define ARCRelease(...) { void *retainedThing = (__bridge void *) __VA_ARGS__; id unretainedThing = (__bridge_transfer id)retainedThing; unretainedThing = nil; }
 #define ARCRetainCount(obj) CFGetRetainCount((__bridge CFTypeRef)NSApp)
-
-#define SWAssert(condition, desc, ...) NSAssert(condition, desc, __VA_ARGS__)
 
 @implementation Schwarzwald
 
@@ -28,8 +27,8 @@
   ARCRetain(NSApp);
   ARCRetain(NSApp);  // TODO: this is incorrect and causes a memory leak, but without it there is race condition that causes the autorelease drain in Cedar to get a BAD_ACCESS sometimes
 
-  if (!application) [[NSException exceptionWithName:@"SchwarzwaldInitializationException" reason:[NSString stringWithFormat:@"[[%@ alloc] init] returned nil", NSStringFromClass(principalClass)] userInfo:nil] raise];
-  if (application != NSApp) [[NSException exceptionWithName:@"SchwarzwaldInternalError" reason:[NSString stringWithFormat:@"[[%@ alloc] init] did not set NSApp", NSStringFromClass(principalClass)] userInfo:nil] raise];
+  SWAssert(application, @"[[%@ alloc] init] returned nil", NSStringFromClass(principalClass));
+  SWAssert(application == NSApp, @"Internal error: [[%@ alloc] init] did not set NSApp", NSStringFromClass(principalClass));
   // TODO: probably should also validate that [applicationClass sharedApplication] == [NSApplication sharedApplication] == NSApp
   return application;
 }

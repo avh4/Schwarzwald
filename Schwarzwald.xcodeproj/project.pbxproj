@@ -37,6 +37,7 @@
 		B1C60E0F19690800003E3DEC /* NSWindow+Schwarzwald.m in Sources */ = {isa = PBXBuildFile; fileRef = B1366D2F1968B4A900B40CCC /* NSWindow+Schwarzwald.m */; };
 		B1C60E1019690800003E3DEC /* Schwarzwald.m in Sources */ = {isa = PBXBuildFile; fileRef = B1366D041968B31700B40CCC /* Schwarzwald.m */; };
 		B1C60E1119690814003E3DEC /* WeakReference.m in Sources */ = {isa = PBXBuildFile; fileRef = B1366D221968B3BA00B40CCC /* WeakReference.m */; };
+		B1E21E88196B926700A69657 /* SWAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = B1E21E87196B926700A69657 /* SWAssert.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		B1C60E0319690504003E3DEC /* SchwarzwaldSpecs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SchwarzwaldSpecs-Prefix.pch"; sourceTree = "<group>"; };
 		B1C60E0419690504003E3DEC /* Cedar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cedar.framework; path = Frameworks/Cedar.framework; sourceTree = "<group>"; };
 		B1C60E09196905CB003E3DEC /* NSApplication+SchwarzwaldSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSApplication+SchwarzwaldSpec.mm"; sourceTree = "<group>"; };
+		B1E21E87196B926700A69657 /* SWAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWAssert.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				B1366D031968B31700B40CCC /* Schwarzwald.h */,
 				B1366D041968B31700B40CCC /* Schwarzwald.m */,
 				B1366CFD1968B31700B40CCC /* Supporting Files */,
+				B1E21E87196B926700A69657 /* SWAssert.h */,
 				B1366D211968B3BA00B40CCC /* WeakReference.h */,
 				B1366D221968B3BA00B40CCC /* WeakReference.m */,
 			);
@@ -203,6 +206,7 @@
 				B1366D2C1968B47300B40CCC /* NSButton+Schwarzwald.h in Headers */,
 				B1C60DE61968D694003E3DEC /* NSTimer+Schwarzwald.h in Headers */,
 				B1366D301968B4A900B40CCC /* NSWindow+Schwarzwald.h in Headers */,
+				B1E21E88196B926700A69657 /* SWAssert.h in Headers */,
 				B1366D341968B51900B40CCC /* NSApplication+Schwarzwald.h in Headers */,
 				B1366D281968B42B00B40CCC /* NSView+Schwarzwald.h in Headers */,
 				B1366D421968B7A500B40CCC /* Schwarzwald.h in Headers */,

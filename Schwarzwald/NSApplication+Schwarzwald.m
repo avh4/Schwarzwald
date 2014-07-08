@@ -1,6 +1,7 @@
 #import "NSApplication+Schwarzwald.h"
 #import "NSWindow+Schwarzwald.h"
 #import <objc/runtime.h>
+#import "SWAssert.h"
 
 @implementation NSApplication (Schwarzwald)
 
@@ -14,7 +15,7 @@
 
 - (void)click:(NSString *)buttonText {
   NSButton *button = [self findButtonWithText:buttonText];
-  if (!button) @throw [NSException exceptionWithName:@"NSButton not found" reason:[NSString stringWithFormat:@"%@ has no visible button with text: %@", self, buttonText] userInfo:nil];
+  SWAssert(button, @"%@ has no visible button with text: %@", self, buttonText);
   [button performClick:nil];
 }
 
