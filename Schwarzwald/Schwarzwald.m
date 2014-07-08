@@ -6,6 +6,8 @@
 #define ARCRelease(...) { void *retainedThing = (__bridge void *) __VA_ARGS__; id unretainedThing = (__bridge_transfer id)retainedThing; unretainedThing = nil; }
 #define ARCRetainCount(obj) CFGetRetainCount((__bridge CFTypeRef)NSApp)
 
+#define SWAssert(condition, desc, ...) NSAssert(condition, desc, __VA_ARGS__)
+
 @implementation Schwarzwald
 
 + (NSApplication *)createApplication {
@@ -62,6 +64,7 @@
 + (NSApplication *)createApplicationWithMainPlist:(NSString *)appPlistFilename {
   NSBundle *specBundle = [self findTestBundle];
   NSString *plistPath = [specBundle pathForResource:appPlistFilename ofType:@"plist"];
+  SWAssert(plistPath, @"%@.plist was not found in the test bundle.  Find your Info.plist file (typically MyApp/Supporting Files/MyApp-Info.plist), and make sure it is a member of your Tests/Specs target (check the box under 'Target Membership' in the Utilities (right) sidebar", appPlistFilename);
   NSDictionary *infoDictionary = [NSDictionary dictionaryWithContentsOfFile:plistPath];
   Class principalClass = NSClassFromString([infoDictionary objectForKey:@"NSPrincipalClass"]);
   NSString *mainNibName = [infoDictionary objectForKey:@"NSMainNibFile"];
